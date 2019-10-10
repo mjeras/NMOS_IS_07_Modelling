@@ -1,0 +1,12 @@
+{
+  "id": "urn:x-nmos:events:template:counter",
+  "type": "template",
+  "name": "Counter",
+  "description": "A generic counter",
+  "outputs": {
+    "state": {
+      "type": "urn:x-nmos:events:type:timecode",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "urn:x-nmos:events:template:playout:event:name",
+  "type": "template",
+  "name": "Event name",
+  "description": "Playlist event name",
+  "outputs": {
+    "state": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

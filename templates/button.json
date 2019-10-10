@@ -1,0 +1,13 @@
+{
+  "id": "urn:x-nmos:events:template:button:simple",
+  "type": "template",
+  "name": "Simple button",
+  "description": "A simple button sending its state",
+  "outputs": {
+    "state": {
+      "description": "Is the button pressed?",
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "urn:x-nmos:events:template:button:smart",
+  "base": "urn:x-nmos:events:template:button:simple",
+  "type": "template",
+  "name": "Smart button",
+  "description": "A button with colour and/or text capability",
+  "inputs": {
+    "text": {
+      "description": "Button text",
+      "type": "string"
+    },
+    "colour":{
+      "description": "Button colour",
+      "type": "urn:x-nmos:events:type:colour:rgb"
+    }
+  }
+}

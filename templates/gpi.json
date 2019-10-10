@@ -1,0 +1,13 @@
+{
+  "id": "urn:x-nmos:events:template:gpi",
+  "type": "template",
+  "name": "GPI",
+  "description": "GPI output",
+  "outputs": {
+    "state": {
+      "description": "Is the GPI \"ON\"?",
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

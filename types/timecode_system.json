@@ -1,0 +1,21 @@
+{
+  "id": "urn:x-nmos:events:type:timecode_system",
+  "type": "object",
+  "properties": {
+    "frame_rate": {
+      "type": "number",
+      "required": true
+    },
+    "frames_per_second": {
+      "type": "number",
+      "min": 24,
+      "max": 60,
+      "step": 1,
+      "required": true
+    },
+    "drop_frame":{
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

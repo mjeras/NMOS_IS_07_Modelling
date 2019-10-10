@@ -1,0 +1,15 @@
+{
+  "id": "urn:x-nmos:events:type:colour:rgb",
+  "type": "object",
+  "properties": {
+    "red": {
+      "type": "urn:x-nmos:events:type:number:normalized"
+    },
+    "green": {
+      "type": "urn:x-nmos:events:type:number:normalized"
+    },
+    "blue": {
+      "type": "urn:x-nmos:events:type:number:normalized"
+    }
+  }
+}

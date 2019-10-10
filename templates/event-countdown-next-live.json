@@ -1,0 +1,6 @@
+{
+  "id": "urn:x-nmos:events:template:playout:event:countdown:next_live",
+  "base": "urn:x-nmos:events:template:counter",
+  "type": "template",
+  "name": "Countdown to next live event"
+}

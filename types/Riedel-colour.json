@@ -1,0 +1,117 @@
+{
+  "id": "urn:x-riedel:type:colour:panel"
+  "type": "complex/colour",
+  "values": [{
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "sandy brown"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "unmellow yellow"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "medium spring bud"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "inchworm"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "screamin green"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "mint green"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "aquamarine"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "electric blue"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "maya blue"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "medium slate blue"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "bright lavender"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "heliotrope"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "pale magenta"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "hot pink"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "pastel red"
+  }, {
+    "value": {
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "label": "timberwolf"
+  }]
+}

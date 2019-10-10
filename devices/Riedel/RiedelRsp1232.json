@@ -1,0 +1,73 @@
+{
+  "id": "urn:x-riedel:panel:RSP1232",
+  "type": "device",
+  "name": "RSP-1232",
+  "software": false,
+  "description": "A very cool panel from Riedel",
+  "vendor": "Riedel Communications",
+  "components": {
+    "buttons": {
+      "type": "array",
+      "description": "Lever keys",
+      "count": 16,
+      "items": {
+        "template": "urn:x-nmos:events:template:button:smart",
+        "template_usage": "provider",
+        "outputs": {
+          "state": {
+            "type": "boolean",
+            "role": "button"
+          },
+          "tri-state": {
+            "type": "number",
+            "values": [
+              {
+                "value": 0,
+                "label": "middle"
+              },
+              {
+                "value": -1,
+                "label": "down"
+              },
+              {
+                "value": 1,
+                "label": "up"
+              }
+            ],
+            "role": "Lever"
+          }
+        },
+        "inputs": {
+          "text": {
+            "type": "string",
+            "maxLength": 8,
+            "role": "button/Label"
+          },
+          "colour": {
+            "type": "urn:x-riedel:type:colour:panel",
+            "role": "button/Colour"
+          },
+          "subtext": {
+            "description": "Second line of text",
+            "type": "string",
+            "maxLength": 8,
+            "role": "button/Label/2"
+          },
+          "colour-up": {
+            "type": "urn:x-nmos:events:type:colour:rgb",
+            "role": "Led/Colour/Up"
+          },
+          "colour-down": {
+            "type": "urn:x-nmos:events:type:colour:rgb",
+            "role": "Led/Colour/Down"
+          }
+        }
+      }
+    }
+  },
+  "inputs": {
+    "brightness-display": {
+      "type": ""
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "urn:x-pebble:marina",
+  "type": "device",
+  "software": true,
+  "name": "Marina Client",
+  "description": "Playout automation client",
+  "vendor": "Pebble Beach Systems",
+  "components": {
+    "layout": {
+      "type": "single",
+      "description": "Current Layout",
+      "outputs": {
+        "state": {
+          "type": "string",
+          "role": "layout"
+        }
+      }
+    },
+    "smart_panel": {
+      "type": "array",
+      "description": "Marina Smart Panel buttons",
+      "count": "dynamic",
+      "items": {
+        "template": "urn:x-nmos:events:template:button:simple",
+        "template_usage": "consumer",
+        "inputs": {
+          "state": {
+            "type": "boolean",
+            "role": "button"
+          }
+        }
+      }
+    }
+  }
+}

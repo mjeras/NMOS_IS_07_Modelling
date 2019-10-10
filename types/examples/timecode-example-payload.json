@@ -1,0 +1,14 @@
+{
+  "hours": 10,
+  "minutes": 7,
+  "seconds": 53,
+  "frames": 28,
+  "system": {
+    "frame-rate": {
+      "value": 30000,
+      "scale": 1001
+    },
+    "frames_per_second": 30,
+    "drop_frame": true
+  }
+}

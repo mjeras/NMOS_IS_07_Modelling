@@ -1,0 +1,63 @@
+---
+id: urn:x-pebble:marina
+type: device
+software: true
+name: Marina Server
+description: Playout automation server
+vendor: Pebble Beach Systems
+components:
+  smart_panel:
+    type: array
+    description: Marina Smart Panel buttons
+    count: dynamic
+    items:
+      template: urn:x-nmos:events:template:button:simple
+      template_usage: consumer
+      inputs:
+        state:
+          type: boolean
+          role: button
+  gpi:
+    type: array
+    description: GPI Output
+    count: dynamic
+    max_count: 128
+    items:
+      template: urn:x-nmos:events:template:gpi
+      template_usage: provider
+      outputs:
+        state:
+          type: boolean
+          role: gpi
+  automation_stats:
+    type: set
+    description: Playout automation statictics
+    items:
+      current_event_name:
+        template: urn:x-nmos:events:template:playout:event:name:current
+        template_usage: provider
+        outputs:
+          state:
+            type: string
+            role: event/name/current
+      next_event_name:
+        template: urn:x-nmos:events:template:playout:event:name:next
+        template_usage: provider
+        outputs:
+          state:
+            type: string
+            role: event/name/next
+      next_event_countdown:
+        template: urn:x-nmos:events:template:playout:event:countdown:next
+        template_usage: provider
+        outputs:
+          state:
+            type: string
+            role: event/countdown/next
+      next_live_countdown:
+        template: urn:x-nmos:events:template:playout:event:countdown:next_live
+        template_usage: provider
+        outputs:
+          state:
+            type: string
+            role: event/countdown/next_live

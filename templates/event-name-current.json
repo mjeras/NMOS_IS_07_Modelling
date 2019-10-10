@@ -1,0 +1,13 @@
+{
+  "id": "urn:x-nmos:events:template:playout:event:name:current",
+  "type": "template",
+  "base": "urn:x-nmos:events:template:playout:event:name",
+  "name": "Current event name",
+  "description": "Name of the currently playing playlist event",
+  "outputs": {
+    "state": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
