@@ -1,0 +1,12 @@
+{
+  "id": "urn:x-nmos:rtp:anc_data",
+  "type": "template",
+  "name": "Anc Data",
+  "description": "Anc Data",
+  "outputs": {
+    "anc_data": {
+      "format": "urn:x-nmos:format:data",
+      "media_type": "video/smpte291"
+    }
+  }
+}
