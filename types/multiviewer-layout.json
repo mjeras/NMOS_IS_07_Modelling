@@ -1,0 +1,14 @@
+{
+  "id": "urn:x-nmos:events:type:multiviewer:layout",
+  "type": "object",
+  "properties": {
+    "id": 
+    {
+      "type": "string"
+    },
+    "name":
+    {
+      "type": "string"
+    }
+  }
+}
