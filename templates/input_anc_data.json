@@ -1,0 +1,11 @@
+{
+  "id": "urn:x-nmos:input:anc_data",
+  "type": "template",
+  "name": "Input Anc Data",
+  "description": "Input Anc Data",
+  "inputs": {
+    "anc_data": {
+      "type": "urn:x-nmos:format:data"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "urn:x-nmos:events:template:umd",
+  "type": "template",
+  "name": "UMD",
+  "description": "UMD text",
+  "inputs": {
+    "text": {
+      "description": "The UMD text",
+      "type": "string",
+      "required": true
+    }
+  }
+}

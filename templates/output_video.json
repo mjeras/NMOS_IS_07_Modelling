@@ -1,0 +1,11 @@
+{
+  "id": "urn:x-nmos:output:video",
+  "type": "template",
+  "name": "Output Video",
+  "description": "Output Video",
+  "outputs": {
+    "video": {
+      "type": "urn:x-nmos:format:video"
+    }
+  }
+}

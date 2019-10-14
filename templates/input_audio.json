@@ -1,0 +1,11 @@
+{
+  "id": "urn:x-nmos:input:audio",
+  "type": "template",
+  "name": "Input Audio",
+  "description": "Input Audio",
+  "inputs": {
+    "audio": {
+      "type": "urn:x-nmos:format:audio"
+    }
+  }
+}
