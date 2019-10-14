@@ -1,7 +1,7 @@
 {
   "id": "urn:x-manufacturer:product",
   "type": "device",
-  "software": false,
+  "software": true,
   "name": "MV",
   "description": "MV engine",
   "vendor": "Manufacturer name",
@@ -15,7 +15,7 @@
         "description": "Input tally 0 and 1, UMD, video, audio and anc-data",
         "items": {
           "tally_0": {
-            "template": "urn:x-nmos:events:template:tally_light",
+            "template": "urn:x-nmos:events:template:tally",
             "template_usage": "consumer",
             "inputs": {
               "state": {
@@ -25,7 +25,7 @@
             }
           },
           "tally_1": {
-            "template": "urn:x-nmos:events:template:tally_light",
+            "template": "urn:x-nmos:events:template:tally",
             "template_usage": "consumer",
             "inputs": {
               "state": {
@@ -45,11 +45,12 @@
             }
           },
           "video": {
-            "template": "urn:x-nmos:input:video",
+            "template": "urn:x-nmos:rtp:video",
             "template_usage": "consumer",
             "inputs": {
               "video": {
-                "type": "urn:x-nmos:format:video",
+                "format": "urn:x-nmos:format:video",
+                "media_type": "video/raw",
                 "role": "video"
               }
             }
@@ -59,11 +60,12 @@
             "description": "Audio receivers per input",
             "count": "dynamic",
             "items": {
-              "template": "urn:x-nmos:input:audio",
+              "template": "urn:x-nmos:rtp:audio",
               "template_usage": "consumer",
               "inputs": {
                 "audio": {
-                  "type": "urn:x-nmos:format:audio",
+                  "format": "urn:x-nmos:format:audio",
+                  "media_type": "audio/L16",
                   "role": "audio"
                 }
               }
@@ -74,11 +76,12 @@
             "description": "Anc-Data receivers per input",
             "count": "dynamic",
             "items": {
-              "template": "urn:x-nmos:input:anc_data",
+              "template": "urn:x-nmos:rtp:anc_data",
               "template_usage": "consumer",
               "inputs": {
                 "anc_data": {
-                  "type": "urn:x-nmos:format:data",
+                  "format": "urn:x-nmos:format:data",
+                  "media_type": "video/smpte291",
                   "role": "anc_data"
                 }
               }
@@ -106,11 +109,12 @@
             }
           },
           "video": {
-            "template": "urn:x-nmos:output:video",
+            "template": "urn:x-nmos:rtp:video",
             "template_usage": "provider",
             "outputs": {
               "video": {
-                "type": "urn:x-nmos:format:video",
+                "format": "urn:x-nmos:format:video",
+                "media_type": "video/raw",
                 "role": "video"
               }
             }
@@ -122,11 +126,12 @@
       "type": "single",
       "description": "Audio output",
       "item": {
-        "template": "urn:x-nmos:output:audio",
+        "template": "urn:x-nmos:rtp:audio",
         "template_usage": "provider",
         "outputs": {
           "audio": {
-            "type": "urn:x-nmos:format:audio",
+            "format": "urn:x-nmos:format:audio",
+            "media_type": "audio/L16",
             "role": "audio"
           }
         }
