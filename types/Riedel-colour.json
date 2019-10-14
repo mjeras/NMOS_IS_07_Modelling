@@ -1,5 +1,5 @@
 {
-  "id": "urn:x-riedel:type:colour:panel"
+  "id": "urn:x-riedel:type:colour:panel",
   "type": "complex/colour",
   "values": [{
     "value": {

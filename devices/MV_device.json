@@ -1,0 +1,141 @@
+{
+  "id": "urn:x-manufacturer:product",
+  "type": "device",
+  "software": true,
+  "name": "MV",
+  "description": "MV engine",
+  "vendor": "Manufacturer name",
+  "components": {
+    "mv_inputs": {
+      "type": "array",
+      "description": "Multiviewer inputs",
+      "count": 32,
+      "item": {
+        "type": "set",
+        "description": "Input tally 0 and 1, UMD, video, audio and anc-data",
+        "items": {
+          "tally_0": {
+            "template": "urn:x-nmos:events:template:tally",
+            "template_usage": "consumer",
+            "inputs": {
+              "state": {
+                "type": "boolean",
+                "role": "tally_0"
+              }
+            }
+          },
+          "tally_1": {
+            "template": "urn:x-nmos:events:template:tally",
+            "template_usage": "consumer",
+            "inputs": {
+              "state": {
+                "type": "boolean",
+                "role": "tally_1"
+              }
+            }
+          },
+          "umd": {
+            "template": "urn:x-nmos:events:template:umd",
+            "template_usage": "consumer",
+            "inputs": {
+              "text": {
+                "type": "string",
+                "role": "umd"
+              }
+            }
+          },
+          "video": {
+            "template": "urn:x-nmos:rtp:video",
+            "template_usage": "consumer",
+            "inputs": {
+              "video": {
+                "format": "urn:x-nmos:format:video",
+                "media_type": "video/raw",
+                "role": "video"
+              }
+            }
+          },
+          "audio": {
+            "type": "array",
+            "description": "Audio receivers per input",
+            "count": "dynamic",
+            "items": {
+              "template": "urn:x-nmos:rtp:audio",
+              "template_usage": "consumer",
+              "inputs": {
+                "audio": {
+                  "format": "urn:x-nmos:format:audio",
+                  "media_type": "audio/L16",
+                  "role": "audio"
+                }
+              }
+            }
+          },
+          "anc_data": {
+            "type": "array",
+            "description": "Anc-Data receivers per input",
+            "count": "dynamic",
+            "items": {
+              "template": "urn:x-nmos:rtp:anc_data",
+              "template_usage": "consumer",
+              "inputs": {
+                "anc_data": {
+                  "format": "urn:x-nmos:format:data",
+                  "media_type": "video/smpte291",
+                  "role": "anc_data"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "mv_video_outputs": {
+      "type": "array",
+      "description": "Outputs",
+      "count": 4,
+      "item": {
+        "type": "set",
+        "description": "Output current layout and video",
+        "items": {
+          "layout": {
+            "template": "urn:x-nmos:events:template:multiviewer:layout:current",
+            "template_usage": "provider",
+            "outputs": {
+              "layout": {
+                "type": "urn:x-nmos:events:type:multiviewer:layout",
+                "role": "layout/current"
+              }
+            }
+          },
+          "video": {
+            "template": "urn:x-nmos:rtp:video",
+            "template_usage": "provider",
+            "outputs": {
+              "video": {
+                "format": "urn:x-nmos:format:video",
+                "media_type": "video/raw",
+                "role": "video"
+              }
+            }
+          }
+        }
+      }
+    },
+    "mv_audio_output": {
+      "type": "single",
+      "description": "Audio output",
+      "item": {
+        "template": "urn:x-nmos:rtp:audio",
+        "template_usage": "provider",
+        "outputs": {
+          "audio": {
+            "format": "urn:x-nmos:format:audio",
+            "media_type": "audio/L16",
+            "role": "audio"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "urn:x-nmos:events:template:tally",
+  "type": "template",
+  "name": "Tally",
+  "description": "Tally state",
+  "outputs": {
+    "state": {
+      "description": "Is the tally \"ON\"?",
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

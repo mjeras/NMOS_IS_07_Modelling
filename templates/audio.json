@@ -1,0 +1,12 @@
+{
+  "id": "urn:x-nmos:rtp:audio",
+  "type": "template",
+  "name": "Audio",
+  "description": "Audio",
+  "outputs": {
+    "audio": {
+      "format": "urn:x-nmos:format:audio",
+      "media_type": "audio/L16"
+    }
+  }
+}

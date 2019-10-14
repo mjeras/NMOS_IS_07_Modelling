@@ -1,0 +1,12 @@
+{
+  "id": "urn:x-nmos:events:template:multiviewer:layout:current",
+  "type": "template",
+  "name": "Current layout",
+  "description": "Current layout",
+  "outputs": {
+    "layout": {
+      "type": "urn:x-nmos:events:type:multiviewer:layout",
+      "required": true
+    }
+  }
+}
