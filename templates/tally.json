@@ -1,9 +1,9 @@
 {
-  "id": "urn:x-nmos:events:template:tally_light",
+  "id": "urn:x-nmos:events:template:tally",
   "type": "template",
-  "name": "Tally light",
-  "description": "Tally light state",
-  "inputs": {
+  "name": "Tally",
+  "description": "Tally state",
+  "outputs": {
     "state": {
       "description": "Is the tally \"ON\"?",
       "type": "boolean",
