@@ -1,0 +1,12 @@
+{
+  "id": "urn:x-nmos:rtp:video",
+  "type": "template",
+  "name": "Video",
+  "description": "Video",
+  "outputs": {
+    "video": {
+      "format": "urn:x-nmos:format:video",
+      "media_type": "video/raw"
+    }
+  }
+}
