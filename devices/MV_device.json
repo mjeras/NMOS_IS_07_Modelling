@@ -1,0 +1,136 @@
+{
+  "id": "urn:x-manufacturer:product",
+  "type": "device",
+  "software": false,
+  "name": "MV",
+  "description": "MV engine",
+  "vendor": "Manufacturer name",
+  "components": {
+    "mv_inputs": {
+      "type": "array",
+      "description": "Multiviewer inputs",
+      "count": 32,
+      "item": {
+        "type": "set",
+        "description": "Input tally 0 and 1, UMD, video, audio and anc-data",
+        "items": {
+          "tally_0": {
+            "template": "urn:x-nmos:events:template:tally_light",
+            "template_usage": "consumer",
+            "inputs": {
+              "state": {
+                "type": "boolean",
+                "role": "tally_0"
+              }
+            }
+          },
+          "tally_1": {
+            "template": "urn:x-nmos:events:template:tally_light",
+            "template_usage": "consumer",
+            "inputs": {
+              "state": {
+                "type": "boolean",
+                "role": "tally_1"
+              }
+            }
+          },
+          "umd": {
+            "template": "urn:x-nmos:events:template:umd",
+            "template_usage": "consumer",
+            "inputs": {
+              "text": {
+                "type": "string",
+                "role": "umd"
+              }
+            }
+          },
+          "video": {
+            "template": "urn:x-nmos:input:video",
+            "template_usage": "consumer",
+            "inputs": {
+              "video": {
+                "type": "urn:x-nmos:format:video",
+                "role": "video"
+              }
+            }
+          },
+          "audio": {
+            "type": "array",
+            "description": "Audio receivers per input",
+            "count": "dynamic",
+            "items": {
+              "template": "urn:x-nmos:input:audio",
+              "template_usage": "consumer",
+              "inputs": {
+                "audio": {
+                  "type": "urn:x-nmos:format:audio",
+                  "role": "audio"
+                }
+              }
+            }
+          },
+          "anc_data": {
+            "type": "array",
+            "description": "Anc-Data receivers per input",
+            "count": "dynamic",
+            "items": {
+              "template": "urn:x-nmos:input:anc_data",
+              "template_usage": "consumer",
+              "inputs": {
+                "anc_data": {
+                  "type": "urn:x-nmos:format:data",
+                  "role": "anc_data"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "mv_video_outputs": {
+      "type": "array",
+      "description": "Outputs",
+      "count": 4,
+      "item": {
+        "type": "set",
+        "description": "Output current layout and video",
+        "items": {
+          "layout": {
+            "template": "urn:x-nmos:events:template:multiviewer:layout:current",
+            "template_usage": "provider",
+            "outputs": {
+              "layout": {
+                "type": "urn:x-nmos:events:type:multiviewer:layout",
+                "role": "layout/current"
+              }
+            }
+          },
+          "video": {
+            "template": "urn:x-nmos:output:video",
+            "template_usage": "provider",
+            "outputs": {
+              "video": {
+                "type": "urn:x-nmos:format:video",
+                "role": "video"
+              }
+            }
+          }
+        }
+      }
+    },
+    "mv_audio_output": {
+      "type": "single",
+      "description": "Audio output",
+      "item": {
+        "template": "urn:x-nmos:output:audio",
+        "template_usage": "provider",
+        "outputs": {
+          "audio": {
+            "type": "urn:x-nmos:format:audio",
+            "role": "audio"
+          }
+        }
+      }
+    }
+  }
+}
