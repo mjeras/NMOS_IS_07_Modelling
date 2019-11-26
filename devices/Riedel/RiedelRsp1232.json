@@ -35,6 +35,24 @@
               }
             ],
             "role": "Lever"
+          },
+          "rotary": {
+            "type": "number",
+            "values": [
+              {
+                "value": 0,
+                "label": "neutral"
+              },
+              {
+                "value": -1,
+                "label": "decrement"
+              },
+              {
+                "value": 1,
+                "label": "increment"
+              }
+            ],
+            "role": "Rotary"
           }
         },
         "inputs": {
