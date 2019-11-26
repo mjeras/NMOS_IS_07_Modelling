@@ -1,0 +1,13 @@
+{
+  "IS_04_id": "9cc6e08a-971a-4837-a9a8-eac0e6f3ce98",
+  "state": "true",
+  "rx_datarate": 1233,
+  "rxPackets_second": 98,
+  "expected_rx_pps": 99,
+  "current_rx_pps": 99,
+  "Packetloss": 13,
+  "reordered_packets": 1,
+  "Jitter": 2,
+  "Corrupt_Packets": 4,
+  "timestamp_offset": 34567
+}

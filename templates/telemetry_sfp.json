@@ -1,0 +1,53 @@
+{
+  "id": "urn:x-nmos:events:type:telemetry_sfp",
+  "type": "object",
+  "properties": {
+    "sfp_id": {
+      "type": "string",
+      "required": false
+    },
+    "sfp_name": {
+      "type": "string",
+      "required": false
+    },
+    "sfp_vendor":{
+      "type": "string"
+      "required": false
+    }
+    "sfp_vendor":{
+      "type": "string",
+      "required": false
+    },
+    "sfp_partnumber":{
+      "type": "string",
+      "required": false
+    },
+    "sfp_wavelength":{
+      "type": "number",
+      "required": true
+    },
+    "link_state":{
+      "type": "boolean",
+      "required": true
+    },
+    "signal_present":{
+      "type": "boolean",
+      "required": true
+    },
+    "temperature":{
+      "type": "number",
+      "required": false
+    },
+    "tx_power":{
+      "type": "number",
+      "required": true
+    },
+    "rx_power":{
+      "type": "number",
+      "min": 0,
+      "max": 0,
+      "step": 1,
+      "required": true
+    }
+  }
+}

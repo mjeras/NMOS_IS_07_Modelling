@@ -1,0 +1,13 @@
+{
+  "port_id": "AA-BB-CC-DD-EE-FF",
+  "sfp_id": "123456",
+  "sfp_name": "Municom-xxyyzz",
+  "sfp_vendor": "Municom",
+  "sfp_partnumber": "5555",
+  "sfp_wavelength": 1310,
+  "link_state": true,
+  "signal_present": true,
+  "temperature": 34,
+  "tx_power": 5,
+  "rx_power": 5
+}

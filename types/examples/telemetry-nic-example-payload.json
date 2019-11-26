@@ -1,0 +1,12 @@
+{
+  "nic_name": "eth0",
+  "port_id": "AA-BB-CC-DD-EE",
+  "nic_link_state": true,
+  "nic_link_speed": "10MBitHD",
+  "txRate": 1234567,
+  "rxRate":1234567,
+  "txPackets_secood": 99,
+  "rxPackets_second": 99,
+  "txDroppedPackets_total": 0,
+  "rxPacketsInError_total": 0,
+}

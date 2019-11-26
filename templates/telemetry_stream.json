@@ -1,0 +1,63 @@
+{
+  "id": "urn:x-nmos:events:type:telemetry_stream",
+  "type": "object",
+  "properties": {
+    "IS_04_id": {
+      "type": "string",
+      "required": false,
+      "description": "sender or receiver ID as in IS-04 Sender Object. Example: 9cc6e08a-971a-4837-a9a8-eac0e6f3ce99"
+    },
+    "state":{
+      "type": "boolean",
+      "description": "shows if particular sender or receiver is actively sending or receiving in an operative state"
+      "required": true
+    },
+    "tx_datarate": {
+      "type": "urn:x-nmos:events:type:bandwidth",
+      "description": "datarate of particular outgoing stream"
+    },
+    "rx_datarate":{
+      "type": "urn:x-nmos:events:type:bandwidth",
+      "description": "datarate of particular incoming stream"
+    },
+    "expected_rx_datarate": {
+      "type": "urn:x-nmos:events:type:bandwidth",
+      "description": "Expected datarate of particular incoming stream"
+    },
+    "txPackets_seconod":{
+      "type": "number",
+      "required": false
+    },
+    "rxPackets_second":{
+      "type": "number",
+      "required": false
+    },
+    "expected_rx_pps": {
+      "type": "number",
+      "description": "Expected RX Packets per Second"
+    },
+    "current_rx_pps": {
+      "type": "number",
+      "description": "Current RX Packets per Second"
+    },
+    "Packetloss": {
+      "type": "number",
+      "description": "cumulated lost packets since start of sender/receiver"
+    },
+    "reordered_packets": {
+      "type": "number"
+    },
+    "Jitter": {
+      "type": "number",
+      "description": "Jitter in ms"
+    },
+    "Corrupt_Packets": {
+      "type": "number"
+      "description": "cumulated corrupted packets since start of sender/receiver "
+    },
+    "timestamp_offset": {
+      "type": "number"
+      "description": "Timestamp offset of stream to local Media Clock"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "urn:x-nmos:events:template:telemetry_nic",
+  "type": "object",
+  "properties": {
+    "nic_name": {
+      "description": "Network Interface description name from OS, like eth0. Needs to be relateable to IS-04 information",
+      "type": "string",
+      "required": true
+    },
+    "port_id": {
+      "description": "MAC Address, as displayed as port_id in IS-04 interface object",
+      "type": "string",
+      "required": true
+    },
+    // network up or down
+    "nic_link_state":{
+      "type": "boolean",
+      "required": true
+    },
+    "nic_link_speed":{
+      "type": "string",
+      "required": true
+    },
+    "txRate":{
+      "type": "urn:x-nmos:events:type:bandwidth"
+      },
+    "rxRate":{
+      "type": "urn:x-nmos:events:type:bandwidth"
+    },
+    "txPackets_second":{
+      "type": "number",
+      "required": false
+    },
+    "rxPackets_second":{
+      "type": "number",
+      "required": false
+    },
+    "txDroppedPackets_total":{
+      "type": "number",
+      "required": false
+    },
+    "rxPacketsInError_total":{
+      "type": "number",
+      "required": false
+    }
+  }
+}

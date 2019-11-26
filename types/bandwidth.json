@@ -1,0 +1,40 @@
+{
+  "id": "urn:x-nmos:events:type:timecode",
+  "type": "object",
+  "properties": {
+    "hours": {
+      "type": "number",
+      "min": 0,
+      "step": 1,
+      "required": true
+    },
+    "minutes": {
+      "type": "number",
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "required": true
+    },
+    "seconds": {
+      "type": "number",
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "required": true
+    },
+    "frames": {
+      "type": "number",
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "required": true
+    },
+    "negative":{
+      "type": "boolean",
+      "default": false
+    },
+    "system":{
+      "type": "urn:x-nmos:events:type:timecode_system"
+    }
+  }
+}
